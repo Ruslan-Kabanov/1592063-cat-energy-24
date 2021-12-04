@@ -1,10 +1,30 @@
 .programs {
-  padding: 20px 0 20px;
+  padding: 20px;
+}
+
+.programs__wrapper {
+  margin: 0 20px;
+  margin: 0 auto;
+
+  @media (min-width: @tablet-width) {
+    width: 710px;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 1220px;
+  }
 }
 
 .programs__list {
   margin: 0;
   padding: 0;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 20px;
+
+  @media (min-width: @desktop-width) {
+    grid-template-columns: 1fr 1fr;
+  }
 }
 
 .programs__item {
@@ -13,9 +33,14 @@
   font-family: "Oswald", sans-serif;
   font-style: normal;
   padding: 20px;
+  width: 100%;
 
-  &:not(:last-child) {
-    margin-bottom: 20px;
+  @media (min-width: @tablet-width) {
+    width: 710px;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 570px;
   }
 }
 

@@ -1,7 +1,23 @@
+.main-nav {
+  width: 440px;
+}
+
 .main-nav__list {
   margin: 0;
   padding: 0;
+  display: none;
+
+  @media (min-width: @tablet-width) {
+    display: flex;
+  }
 }
+
+.main-nav__toggle {
+  @media (min-width: @tablet-width) {
+    display: none;
+  }
+}
+
 
 .main-nav__list-item {
   border-top: 1px solid #e6e6e6;
@@ -11,6 +27,14 @@
 
   &:last-child {
     border-bottom: 1px solid #e6e6e6;
+
+    @media (min-width: @tablet-width) {
+      border: none;
+    }
+  }
+
+  @media (min-width: @tablet-width) {
+    border: none;
   }
 }
 
@@ -24,4 +48,14 @@
   color: #000000;
   text-decoration: none;
   padding: 22px 0;
+
+  @media (min-width: @tablet-width) {
+    font-size: 18px;
+    line-height: 24px;
+    font-weight: 400;
+  }
+
+  @media (min-width: @desktop-width) {
+    color: #e6e6e6;
+  }
 }

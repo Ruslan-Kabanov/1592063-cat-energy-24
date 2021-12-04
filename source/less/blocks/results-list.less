@@ -3,6 +3,12 @@
   font-style: normal;
   font-weight: 400;
   text-align: center;
+  display: flex;
+  flex-direction: column;
+
+  @media (min-width: @tablet-width) {
+    flex-direction: row;
+  }
 }
 
 .results__wrapper {
