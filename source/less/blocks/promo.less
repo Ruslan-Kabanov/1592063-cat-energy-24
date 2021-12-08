@@ -3,10 +3,20 @@
   font-style: normal;
   text-align: center;
   color: #ffffff;
+}
+
+.promo__wrapper {
+  margin: 0 auto;
   display: flex;
   flex-direction: column;
+  align-items: center;
+
+  @media (min-width: @tablet-width) {
+    width: 710px;
+  }
 
   @media (min-width: @desktop-width) {
+    width: 1220px;
     flex-direction: row;
   }
 }
@@ -15,8 +25,13 @@
   background: linear-gradient(rgba(104, 183, 56, 0.85), rgba(104, 183, 56, 0.85)), url("../../img/promo-bg-cat.jpg") no-repeat center;
   padding: 27px 0;
 
+  @media (min-width: @tablet-width) {
+    background: none;
+    color: #000000;
+  }
+
   @media (min-width: @desktop-width) {
-    // background: none;
+    background: none;
   }
 }
 
