@@ -11,4 +11,13 @@
   color: #ffffff;
   text-decoration: none;
   text-align: center;
+
+  &--promo {
+    order: 3;
+
+    @media (min-width: @tablet-width) {
+      order: 2;
+      width: 244px;
+    }
+  }
 }

@@ -1,3 +1,29 @@
-.page-header {
+.page-header__wrapper {
+  display: flex;
+  flex-direction: column;
   padding: 10px 0;
+
+  @media (min-width: @tablet-width) {
+    flex-direction: row;
+    justify-content: space-between;
+    margin: 0 auto;
+    width: 710px;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 1220px;
+    margin: 0 auto;
+  }
 }
+
+.page-header__logo {
+  display: flex;
+  justify-content: space-between;
+  width: 190px;
+
+  @media (min-width: @tablet-width) {
+    width: 174px;
+    justify-content: start;
+  }
+}
+
