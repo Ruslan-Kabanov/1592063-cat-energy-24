@@ -4,6 +4,10 @@
   &--background {
     background-color: @basic-color;
   }
+
+  &--desktop {
+    position: relative;
+  }
 }
 
 .page-contacts__wrapper {
@@ -22,6 +26,16 @@
 .page-contacts__header {
   display: flex;
   justify-content: space-between;
+  align-items: center;
+
+  @media (min-width: @desktop-width) {
+    position: absolute;
+    top: 146px;
+    left: 130px;
+    width: 565px;
+    height: 200px;
+    background-color: #ffffff;
+  }
 }
 
 .page-contacts__title {
@@ -45,4 +59,14 @@
 
 .page-contacts__map-wrapper {
   margin-top: 25px;
+  width: 100%;
+  height: 362px;
+
+  @media (min-width: @tablet-width) {
+    height: 396px;
+  }
+
+  @media (min-width: @desktop-width) {
+    height: 400px;
+  }
 }

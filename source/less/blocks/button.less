@@ -11,12 +11,37 @@
   color: #ffffff;
   text-decoration: none;
   text-align: center;
+  width: 280px;
 
   &--promo {
     order: 3;
 
     @media (min-width: @tablet-width) {
       order: 2;
+      width: 244px;
+    }
+  }
+
+  &--catalog {
+    @media (min-width: @tablet-width) {
+      width: 248px;
+    }
+
+    @media (min-width: @desktop-width) {
+      width: 168px;
+    }
+  }
+
+  &--more {
+    border: none;
+    background-color: @basic-color;
+    color: #444444;
+    cursor: pointer;
+  }
+
+  &--complementary {
+    @media (min-width: @desktop-width) {
+      grid-column: 4/5;
       width: 244px;
     }
   }
