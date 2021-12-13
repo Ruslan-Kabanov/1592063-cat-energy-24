@@ -1,28 +1,26 @@
 .main-nav {
-  width: 440px;
+  position: absolute;
+  top: 55px;
+  left: 0;
+  width: 100%;
+  display: none;
 }
 
 .main-nav__list {
   margin: 0;
   padding: 0;
-  display: none;
+  z-index: 10;
+  background-color: #ffffff;
 
   @media (min-width: @tablet-width) {
     display: flex;
   }
 }
 
-.main-nav__toggle {
-  @media (min-width: @tablet-width) {
-    display: none;
-  }
-}
-
-
 .main-nav__list-item {
   border-top: 1px solid #e6e6e6;
   list-style-type: none;
-  padding: 22px 0;
+  width: 100%;
   text-align: center;
 
   &:last-child {
@@ -39,6 +37,7 @@
 }
 
 .main-nav__list-link {
+  display: block;
   font-family: "Oswald", sans-serif;
   font-style: normal;
   font-weight: 500;

@@ -1,8 +1,11 @@
+.page-header {
+  padding: 10px 0 17px 0;
+}
+
 .page-header__wrapper {
   display: flex;
-  flex-direction: column;
-  min-width: 280px;
   margin: 0 auto;
+  position: relative;
 
   @media (min-width: @tablet-width) {
     flex-direction: row;
@@ -17,14 +20,11 @@
   }
 }
 
-.page-header__logo {
+
+.page-header__logo-wrapper {
   display: flex;
   justify-content: space-between;
-  width: 190px;
-
-  @media (min-width: @tablet-width) {
-    width: 174px;
-    justify-content: start;
-  }
+  align-items: center;
+  padding: 0 20px;
+  width: 100%;
 }
-

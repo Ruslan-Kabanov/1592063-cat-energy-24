@@ -10,14 +10,18 @@
 <body class="page__body">
   <header class="page-header">
     <div class="page-header__wrapper">
-      <a class="page-header__logo">
+      <div class="page-header__logo-wrapper">
+        <a class="page-header__logo">
         <img class="page-header__logo-img" src="img/logo-simple.svg" width="34" height="38" alt="Логотип.">
+        </a>
+        <a class="page-header__logo">
         <img class="page-header__logo-text" src="img/logo-text.svg" width="101" height="18" alt="Кэт энерджи.">
-      </a>
-      <nav class="main-nav">
-        <button class="main-nav__toggle" type="button">
+        </a>
+        <button class="main-menu-toggle main-menu-toggle--closed" type="button"> <!-- main-menu-toggle--opened -->
           <span class="visually-hidden">Открыть меню</span>
         </button>
+      </div>
+      <nav class="main-nav main-nav--closed">
         <ul class="main-nav__list">
           <li class="main-nav__list-item">
             <a class="main-nav__list-link main-nav__list-link--current">Главная</a>
