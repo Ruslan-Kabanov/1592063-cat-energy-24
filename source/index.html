@@ -38,14 +38,14 @@
   </header>
   <main class="main">
     <section class="promo">
-      <div class="promo__wrapper">
         <div class="promo__inner">
         <h1 class="page-title page-title--promo">Функциональное питание для котов</h1>
         <p class="promo__subtitle">Занялся собой? Займись котом!</p>
       </div>
-      <a class="button button--promo" href="">подобрать программу</a>
-      <img class="promo__img" src="img/index-can-mobile-1.png" width="280" height="270" alt="Кэт энерджи со вкусом курицы.">
+      <div class="promo__inner--button">
+        <a class="button button--promo" href="">подобрать программу</a>
       </div>
+      <img class="promo__img" src="img/index-can-mobile-1.png" width="280" height="270" alt="Кэт энерджи со вкусом курицы.">
     </section>
     <section class="programs">
       <h2 class="visually-hidden">Программы</h2>
@@ -90,40 +90,44 @@
       </div>
     </section>
     <section class="live-example">
-      <div class="live-example__wrapper">
-        <div class="live-example__text-wrapper">
+      <!-- <div class="live-example__wrapper"> -->
+        <!-- <div class="live-example__text-wrapper"> -->
           <h2 class="page-title">Живой пример</h2>
           <p class="live-example__text">Борис сбросил 5 кг за 2 месяца, просто заменив свой обычный корм на Cat Energy Slim. Отличный результат без изнуряющих тренировок! При этом он не менял своих привычек и по-прежнему спит по 16 часов в день. </p>
           <dl class="results-list">
             <div class="results__wrapper">
-              <dt class="results-list__term">снижение веса</dt>
-              <dd class="results-list__data">5 КГ</dd>
+              <div class="results__bg-wrapper">
+                <dt class="results-list__term">снижение<br> веса</dt>
+                <dd class="results-list__data">5 КГ</dd>
+              </div>
             </div>
             <div class="results__wrapper">
-              <dt class="results-list__term">затрачено времени</dt>
-            <dd class="results-list__data">60 ДНЕЙ</dd>
+              <div class="results__bg-wrapper">
+                <dt class="results-list__term">затрачено<br> времени</dt>
+                <dd class="results-list__data">60 ДНЕЙ</dd>
+              </div>
             </div>
-            <div class="results__wrapper results__wrapper--total">
+             <div class="results__wrapper results__wrapper--total">
               <dt class="results-list__term results-list__term--total">Затраты на питание:</dt>
               <dd class="results-list__data results-list__data--total">15 000 РУБ.</dd>
             </div>
           </dl>
-        </div>
+        <!-- </div> -->
         <div class="live-example__img-wrapper">
           <img class="live-example__img" src="img/results-cat-fat.png" width="280" height="232" alt="Изображение толстого кота.">
-          <div class="range-slider">
-            <button class="range-slider__button range-slider__button--previous" type="button">было</button>
-            <input class="range-slider__input" type="range" min="1" max="100" value="50">
-            <button class="range-slider__button range-slider__button--next" type="button">стало</button>
+          <div class="live-example__range-slider">
+            <button class="live-example__range-slider-button live-example__range-slider_button--previous" type="button">было</button>
+            <input class="live-example__range-slider-input" type="range" min="1" max="100" value="50"> <!--стилизовать-->
+            <button class="live-example__range-slider-button live-example__range-slider-button--next" type="button">стало</button>
           </div>
-      </div>
-    </div>
+        </div>
+    <!-- </div> -->
     </section>
   </main>
   <section class="page-contacts page-contacts--desktop">
     <h2 class="visually-hidden">Контакты</h2>
     <header class="page-contacts__header">
-      <h3 class="page-contacts__title">приглашаем к сотрудничеству дилеров!</h3>
+      <h3 class="page-contacts__title">приглашаем<br> к сотрудничеству дилеров!</h3>
       <address class="page-contacts__adress">ул. Большая Конюшенная, д. 19/8 Санкт-Петербург</address>
     </header>
     <div class="page-contacts__map-wrapper">
@@ -135,7 +139,7 @@
         <a class="page-footer__logo" href="#">
           <img class="page-footer__logo-img" src="img/footer-logo.svg" width="128" height="24" alt="Кэт энерджи.">
         </a>
-        <ul class="page-footer__social-list">
+        <ul class="page-footer__social-list"> <!--сделать падинги ссылкам-->
           <li class="page-footer__social-item">
             <a class="page-footer__social-link" href=""><span class="visually-hidden">В контакте</span>
               <svg width="23" height="13" viewBox="0 0 23 13" fill="#666666" xmlns="http://www.w3.org/2000/svg">

@@ -4,7 +4,7 @@
   font-style: normal;
   font-weight: normal;
   color: #444444;
-  padding: 25px 0 40px;
+  padding: 25px 20px 40px;
 
   @media (min-width: @tablet-width) {
     background-color: #ffffff;
@@ -12,10 +12,8 @@
 }
 
 .live-example__wrapper {
-  padding: 0 20px;
-  margin: 0 auto;
-  display: flex;
-  flex-direction: column;
+  // display: flex;
+  // flex-direction: column;
 
   @media (min-width: @desktop-width) {
     flex-direction: row;
@@ -34,4 +32,39 @@
 .live-example__text {
   font-size: 14px;
   line-height: 18px;
+  margin: 40px 0 20px;
+}
+
+.live-example__img-wrapper {
+  padding-top: 40px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.live-example__img {
+  margin-bottom: 15px;
+}
+
+.live-example__range-slider-button {
+  font-family: "Oswald", sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 20px;
+  text-transform: uppercase;
+  color: #000000;
+  border: none;
+  cursor: pointer;
+}
+
+.live-example__range-slider {
+  display: flex;
+  width: 100%;
+  padding: 0 25px;
+}
+
+.live-example__range-slider-input {
+  width: 100%;
+  min-width: 85px;
 }
