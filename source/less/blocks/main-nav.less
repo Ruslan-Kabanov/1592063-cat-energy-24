@@ -3,7 +3,16 @@
   top: 55px;
   left: 0;
   width: 100%;
-  display: none;
+
+  &--closed {
+    display: none;
+
+    @media (min-width: @tablet-width) {
+      display: block;
+      position: static;
+      width: 440px;
+    }
+  }
 }
 
 .main-nav__list {
@@ -14,6 +23,11 @@
 
   @media (min-width: @tablet-width) {
     display: flex;
+    justify-content: space-between;
+  }
+
+  @media (min-width: @desktop-width) {
+    background-color: transparent;
   }
 }
 
@@ -33,6 +47,7 @@
 
   @media (min-width: @tablet-width) {
     border: none;
+    width: auto;
   }
 }
 
@@ -55,6 +70,6 @@
   }
 
   @media (min-width: @desktop-width) {
-    color: #e6e6e6;
+    color: #ffffff;
   }
 }

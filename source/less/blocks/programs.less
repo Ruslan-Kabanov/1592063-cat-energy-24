@@ -1,26 +1,31 @@
 .programs {
-  padding: 20px;
-}
+  padding: 20px 20px;
 
-.programs__wrapper {
   @media (min-width: @tablet-width) {
-    width: 710px;
+    padding: 0 30px;
   }
 
   @media (min-width: @desktop-width) {
-    width: 1220px;
+    padding: 80px 110px;
   }
 }
 
 .programs__list {
-  margin: 0;
   padding: 0;
+  margin: 0;
   display: grid;
   grid-template-columns: 1fr;
   gap: 20px;
 
+  @media (min-width: @tablet-width) {
+    width: 708px;
+    margin: 0 auto;
+  }
+
   @media (min-width: @desktop-width) {
     grid-template-columns: 1fr 1fr;
+    gap: 80px;
+    width: auto;
   }
 }
 
@@ -32,28 +37,17 @@
   padding: 30px 20px;
   width: 100%;
   display: grid;
-  grid-template-columns: 25px 1fr 1fr 1fr;
+  grid-template-columns: 1fr auto auto 1fr;
   position: relative;
 
   @media (min-width: @tablet-width) {
-    width: 710px;
+    grid-template-columns: 1fr 1fr;
+    padding: 77px 355px 53px 53px;
   }
 
   @media (min-width: @desktop-width) {
-    width: 570px;
+    padding: 77px 60px 55px 53px;
   }
-}
-
-.programs__title {
-  font-size: 24px;
-  line-height: 37px;
-  font-weight: 400;
-  text-transform: uppercase;
-  color: #000000;
-  margin: 0;
-  margin-bottom: 30px;
-  grid-column: 2/5;
-  text-align: center;
 
   &::before {
     display: block;
@@ -64,15 +58,75 @@
     position: absolute;
     top: 20px;
     left: 20px;
+
+    @media (min-width: @tablet-width) {
+      background: url("..//../img/programs-cat-seat-big.svg") no-repeat center;
+      width: 200px;
+      height: 211px;
+      top: 75px;
+      left: 445px;
+    }
+
+    @media (min-width: @desktop-width) {
+      background: url("..//../img/programs-cat-seat-medium.svg") no-repeat center;
+      width: 100px;
+      height: 106px;
+      top: 45px;
+      left: 55px;
+    }
+  }
+
+  &--last::before {
+    width: 67px;
+    height: 50px;
+    top: 20px;
+    left: 11px;
+    background: url("../../img/programs-cat-walk.svg") no-repeat center;
+
+    @media (min-width: @tablet-width) {
+      background: url("..//../img/programs-cat-walk-big.svg") no-repeat center;
+      width: 268px;
+      height: 200px;
+      top: 75px;
+      left: 410px;
+    }
+
+    @media (min-width: @desktop-width) {
+      background: url("..//../img/programs-cat-walk-medium.svg") no-repeat center;
+      width: 134px;
+      height: 100px;
+      top: 45px;
+      left: 40px;
+    }
   }
 }
 
-.programs__item:last-child .programs__title::before {
-  width: 67px;
-  height: 50px;
-  top: 20px;
-  left: 11px;
-  background: url("../../img/programs-cat-walk.svg") no-repeat center;
+.programs__title {
+  font-size: 24px;
+  line-height: 37px;
+  font-weight: 400;
+  text-transform: uppercase;
+  color: #000000;
+  margin: 0 0 30px 12px;
+  grid-column: 2/4;
+
+  &--last {
+    grid-column: 2/4;
+    margin-left: 40px;
+  }
+
+  @media (min-width: @tablet-width) {
+    font-size: 36px;
+    line-height: 36px;
+    grid-column: 1/4;
+    text-align: left;
+    margin-bottom: 25px;
+  }
+
+  @media (min-width: @desktop-width) {
+    text-align: center;
+    margin-bottom: 73px;
+  }
 }
 
 .programs__text {
@@ -85,24 +139,44 @@
   margin: 0;
   grid-column: 1/5;
 
+  @media (min-width: @tablet-width) {
+    margin-bottom: 48px;
+  }
+
+  @media (min-width: @desktop-width) {
+    font-size: 16px;
+    line-height: 24px;
+    margin-bottom: 23px;
+  }
+
   &::after {
     content: "";
     width: 100%;
     border: 1px solid #d9d9d9;
     display: block;
     margin: 23px 0 25px;
+
+    @media (min-width: @tablet-width) {
+      display: none;
+    }
   }
 }
 
 .programs__link {
-  display: block;
+  display: flex;
   font-size: 16px;
   line-height: 16px;
   font-weight: 400;
   text-decoration: none;
   text-transform: uppercase;
   color: #000000;
+  align-items: center;
   grid-column: 1/5;
+
+  @media (min-width: @tablet-width) {
+    font-size: 20px;
+    line-height: 30px;
+  }
 
   &::after {
     content: "";
@@ -110,7 +184,11 @@
     width: 32px;
     height: 12px;
     display: inline-block;
-    margin-left: 20px;
+    margin-left: 17px;
+
+    @media (min-width: @tablet-width) {
+      margin-left: 25px;
+    }
   }
 
   // &:hover::after {
