@@ -7,17 +7,40 @@
   color: #000000;
   margin: 0;
 
+
   &--promo {
     color: #ffffff;
 
     @media (min-width: @tablet-width) {
-      color: #000000;
+      padding: 45px 30px 47px;
+    }
+  }
+
+  &--tablet {
+    @media (min-width: @tablet-width) {
       font-size: 60px;
       line-height: 60px;
+      color: #000000;
     }
+  }
+
+  &--how-it-works {
+    margin-bottom: 40px;
 
     @media (min-width: @tablet-width) {
-      padding: 45 30px 47px;
+      margin-bottom: 70px;
+    }
+  }
+
+  &--live-example {
+    margin-bottom: 40px;
+
+    @media (min-width: @tablet-width) {
+      margin-bottom: 60px;
+    }
+
+    @media (min-width: @desktop-width) {
+      margin-top: 43px;
     }
   }
 }

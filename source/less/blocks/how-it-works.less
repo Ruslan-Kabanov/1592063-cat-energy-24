@@ -1,46 +1,60 @@
 .how-it-works {
-  padding: 20px 20px 50px;
+  border-bottom: 1px solid #e6e6e6;
 
-  @media (min-width: @tablet-width) {
-    padding: 45 30px 47px;
+  @media (min-width: @desktop-width) {
+    border-bottom: none;
   }
 }
 
-// .how-it-works__wrapper {
+.how-it-works__wrapper {
+  padding: 20px 20px 50px;
 
+  @media (min-width: @tablet-width) {
+    padding: 45px 0 60px;
+    max-width: 708px;
+    margin: 0 auto;
+  }
 
-//   @media (min-width: @desktop-width) {
-//     width: 1220px;
-//   }
-// }
+  @media (min-width: @desktop-width) {
+    max-width: 1220px;
+    padding-bottom: 35px;
+  }
+}
 
 .how-it-works__list {
   padding: 0;
   margin: 0;
-  margin-top: 40px;
   display: grid;
   grid-template-columns: 1fr;
   gap: 20px;
 
   @media (min-width: @tablet-width) {
     grid-template-columns: 1fr 1fr;
-    gap: 37px;
+    gap: 37px 60px;
   }
 
   @media (min-width: @desktop-width) {
     grid-template-columns: 1fr 1fr 1fr 1fr;
-    gap: 37px;
+    gap: 80px;
   }
 }
 
 .how-it-works__item {
   list-style-type: none;
-  outline: 1px solid rgb(245, 81, 81);
   width: 100%;
   display: flex;
   align-items: center;
   position: relative;
   min-height: 60px;
+
+  @media (min-width: @tablet-width) {
+    padding: 112px 65px 43px 0;
+  }
+
+  @media (min-width: @desktop-width) {
+    padding-right: 20px;
+  }
+
 
   &::before {
     content: "";
@@ -54,6 +68,11 @@
     position: absolute;
     top: 0;
     left: 0;
+
+    @media (min-width: @tablet-width) {
+      width: 80px;
+      height: 80px;
+    }
   }
 
   &:nth-child(2)::before {
@@ -62,11 +81,6 @@
 
   &:nth-child(3)::before {
     background-image: url("../../img/alarm.svg");
-  }
-
-  @media (min-width: @tablet-width) {
-    width: 240px;
-    height: 280px;
   }
 }
 
@@ -79,4 +93,41 @@
   color: #444444;
   margin: 0;
   margin-left: 80px;
+
+  @media (min-width: @tablet-width) {
+    margin: 0;
+    font-size: 16px;
+    line-height: 24px;
+    color: #000000;
+  }
+
+  & br {
+    display: none;
+
+    @media (min-width: @tablet-width) {
+      display: inline;
+    }
+
+    @media (min-width: @desktop-width) {
+      display: none;
+    }
+  }
+}
+
+.how-it-works__number {
+  display: none;
+
+  @media (min-width: @tablet-width) {
+    display: block;
+    position: absolute;
+    top: -40px;
+    left: 114px;
+    font-family: "Oswald", sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 280px;
+    line-height: 280px;
+    color: @basic-color;
+    z-index: -1;
+  }
 }
