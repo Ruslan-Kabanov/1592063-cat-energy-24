@@ -13,12 +13,16 @@
       width: 440px;
     }
   }
+
+  &--opened {
+    display: block;
+    z-index: 10;
+  }
 }
 
 .main-nav__list {
   margin: 0;
   padding: 0;
-  z-index: 10;
   background-color: #ffffff;
 
   @media (min-width: @tablet-width) {
@@ -62,6 +66,7 @@
   color: #000000;
   text-decoration: none;
   padding: 22px 0;
+  transition: 0.2s;
 
   @media (min-width: @tablet-width) {
     font-size: 18px;
@@ -71,5 +76,43 @@
 
   @media (min-width: @desktop-width) {
     color: #ffffff;
+  }
+
+  &:hover {
+    color: fade(#000000, 50%);
+
+    @media (min-width: @desktop-width) {
+      color: fade(#ffffff, 50%);
+    }
+  }
+
+  &:active {
+    color: fade(#000000, 25%);
+
+    @media (min-width: @desktop-width) {
+      color: fade(#ffffff, 25%);
+    }
+  }
+
+  &--current {
+    position: relative;
+
+    &::after {
+      content: "";
+      position: absolute;
+      right: 0;
+      left: 0;
+      bottom: 0;
+      height: 2px;
+      background-color: @button-color;
+
+      @media (min-width: @tablet-width) {
+        bottom: 15px;
+      }
+
+      @media (min-width: @desktop-width) {
+        background-color: #ffffff;
+      }
+    }
   }
 }

@@ -12,6 +12,7 @@
   text-decoration: none;
   text-align: center;
   width: 280px;
+  transition: 0.2s;
 
   &--promo {
     width: 100%;
@@ -47,5 +48,14 @@
       grid-column: 4/5;
       width: 244px;
     }
+  }
+
+  &:hover {
+    background-color: @button-color-hover;
+  }
+
+  &:active {
+    background-color: @button-color-hover;
+    color: fade(#ffffff, 30%);
   }
 }

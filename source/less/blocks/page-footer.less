@@ -28,9 +28,18 @@
 
 .page-footer__logo {
   margin-bottom: 32px;
+  transition: 0.2s;
 
   @media (min-width: @tablet-width) {
     margin-bottom: 0;
+  }
+
+  &:hover {
+    opacity: 0.8;
+  }
+
+  &:active {
+    opacity: 0.6;
   }
 }
 
@@ -57,7 +66,6 @@
 }
 
 .page-footer__social-item {
-  // margin-right: 36px;
   display: flex;
   align-items: flex-end;
 
@@ -66,15 +74,32 @@
   }
 }
 
+.page-footer__social-link:hover svg {
+  fill: #68b738;
+}
+
+.page-footer__social-link:active svg {
+  opacity: 0.3;
+}
+
 .page-footer__promo-logo {
   text-decoration: none;
   display: flex;
   justify-content: space-between;
   align-items: center;
   width: 100%;
+  transition: 0.2s;
 
   @media (min-width: @tablet-width) {
     width: 162px;
+  }
+
+  &:hover svg {
+    fill: #68b738;
+  }
+
+  &:active {
+    opacity: 0.3;
   }
 }
 
