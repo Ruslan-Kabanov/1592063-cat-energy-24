@@ -27,8 +27,13 @@
   }
 
   &--catalog {
+    width: 100%;
+    grid-column: 1/3;
+
     @media (min-width: @tablet-width) {
-      width: 248px;
+      width: 100%;
+      font-size: 16px;
+      line-height: 20px;
     }
 
     @media (min-width: @desktop-width) {
@@ -44,9 +49,17 @@
   }
 
   &--complementary {
+    width: 100%;
+    grid-column: 1/3;
+
+    @media (min-width: @tablet-width) {
+      grid-column: 1/4;
+      font-size: 16px;
+      line-height: 20px;
+    }
+
     @media (min-width: @desktop-width) {
       grid-column: 4/5;
-      width: 244px;
     }
   }
 

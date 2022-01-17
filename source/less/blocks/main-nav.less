@@ -12,6 +12,10 @@
       position: static;
       width: 440px;
     }
+
+    @media (min-width: @desktop-width) {
+      width: 500px;
+    }
   }
 
   &--opened {
@@ -75,6 +79,8 @@
   }
 
   @media (min-width: @desktop-width) {
+    font-size: 20px;
+    line-height: 30px;
     color: #ffffff;
   }
 
@@ -94,6 +100,20 @@
     }
   }
 
+  &--catalog {
+    @media (min-width: @desktop-width) {
+      color: #111111;
+    }
+
+    &:hover {
+      color: fade(#111111, 50%);
+    }
+
+    &:active {
+      color: fade(#111111, 25%);
+    }
+  }
+
   &--current {
     position: relative;
 
@@ -109,7 +129,11 @@
       @media (min-width: @tablet-width) {
         bottom: 15px;
       }
+    }
+  }
 
+  &--current-main-page {
+    &::after {
       @media (min-width: @desktop-width) {
         background-color: #ffffff;
       }
